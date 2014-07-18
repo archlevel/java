@@ -5,10 +5,10 @@ MAINTAINER nicolas.deloof@gmail.com <Nicolas De Loof>
 RUN apt-get update
 RUN apt-get -y install curl
 
-# Download JDK 7u65 from Oracle download site
-RUN cd /opt &&  curl -L 'http://download.oracle.com/otn-pub/java/jdk/7u65-b17/jdk-7u65-linux-x64.tar.gz' -H 'Cookie: oraclelicense=accept-securebackup-cookie; gpw_e24=Dockerfile' | tar -xz
+# Download JDK 8u11 from Oracle download site
+RUN cd /opt &&  curl -L 'http://download.oracle.com/otn-pub/java/jdk/8u11-b12/jdk-8u11-linux-x64.tar.gz' -H 'Cookie: oraclelicense=accept-securebackup-cookie; gpw_e24=Dockerfile' | tar -xz
 
-ENV JAVA_HOME /opt/jdk1.7.0_65
+ENV JAVA_HOME /opt/jdk1.8.0_11
 
-RUN ln -s /opt/jdk1.7.0_65/bin/* /usr/local/bin/
+RUN ln -s /opt/jdk1.8.0_11/bin/* /usr/local/bin/
 
